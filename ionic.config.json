@@ -1,0 +1,7 @@
+{
+  "name": "taller-2-crud-mauro",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

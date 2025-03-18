@@ -1,0 +1,59 @@
+ion-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 12px;
+  border-left: 6px solid var(--task-status-color);
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+ion-card-header {
+  background: #3880ff;
+  color: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+ion-card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+ion-card-content {
+  padding: 16px;
+  font-size: 1rem;
+  color: #333;
+
+  p {
+    margin: 8px 0;
+  }
+
+  strong {
+    color: #3880ff;
+  }
+
+  ion-badge {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+  }
+}
+
+/* Colores dinámicos para el estado */
+:host {
+  --task-status-color: #f4f4f4;
+}
+
+:host-context(.completed) {
+  --task-status-color: #28a745; /* Verde para completadas */
+}
+
+:host-context(.pending) {
+  --task-status-color: #ffc107; /* Amarillo para pendientes */
+}

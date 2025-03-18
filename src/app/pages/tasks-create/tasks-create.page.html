@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Tarea</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="form-container">
+    <app-task-form [task]="newTask" buttonText="Guardar" (onSave)="addTask()"></app-task-form>
+  </div>
+</ion-content>

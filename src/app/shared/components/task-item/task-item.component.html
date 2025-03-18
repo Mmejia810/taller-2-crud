@@ -1,0 +1,17 @@
+<ion-item>
+  <ion-label>
+    <h2>{{ task.name }}</h2>
+    <p>{{ task.description }}</p>
+    <p><strong>Fecha:</strong> {{ task.date | date }}</p>
+  </ion-label>
+
+  <ion-button *ngIf="task?.id" color="primary" [routerLink]="'/task-update/' + task.id">
+    <ion-icon slot="start" name="create"></ion-icon>
+    Actualizar
+  </ion-button>
+
+  <ion-button color="danger" *ngIf="task?.id" (click)="deleteTask(task.id)">
+    <ion-icon slot="start" name="trash"></ion-icon>
+    Eliminar
+  </ion-button>
+</ion-item>

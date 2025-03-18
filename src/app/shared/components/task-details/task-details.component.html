@@ -1,0 +1,14 @@
+<ion-card [class.completed]="task.done" [class.pending]="!task.done">
+  <ion-card-header>
+    <ion-card-title>{{ task.name }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>{{ task.description }}</p>
+    <p><strong>Fecha:</strong> {{ task.date | date }}</p>
+    <p><strong>Estado:</strong>
+      <ion-badge [color]="task.done ? 'success' : 'warning'">
+        {{ task.done ? 'Completada' : 'Pendiente' }}
+      </ion-badge>
+    </p>
+  </ion-card-content>
+</ion-card>
